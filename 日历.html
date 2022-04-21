@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 20%;
+            margin: 10px auto;
+            background-color: #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .t {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .d {
+            width: 55px;
+            height: 55px;
+            box-sizing: border-box;
+            background-color: #303030;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            padding-top: 3px;
+            margin: 2%;
+        }
+        
+        .b {
+            width: 100%;
+            border: 1px solid #fff;
+            background-color: rgb(255, 255, 255, .3);
+            box-sizing: border-box;
+            padding: 10px;
+            display: none;
+        }
+        
+        .se {
+            border: 1px solid #0000;
+            color: palevioletred;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="t">
+            <div class="d">
+                <div>1</div>
+                <div>JAN</div>
+            </div>
+            <div class="d">
+                <div>2</div>
+                <div>FER</div>
+            </div>
+            <div class="d">
+                <div>311</div>
+                <div>MAR</div>
+            </div>
+            <div class="d">
+                <div>45</div>
+                <div>APR</div>
+            </div>
+            <div class="d">
+                <div>5</div>
+                <div>MAR</div>
+            </div>
+            <div class="d">
+                <div>6</div>
+                <div>JUN</div>
+            </div>
+            <div class="d">
+                <div>7</div>
+                <div>JUL</div>
+            </div>
+            <div class="d">
+                <div>8</div>
+                <div>AUG</div>
+            </div>
+            <div class="d">
+                <div>9</div>
+                <div>SEP</div>
+            </div>
+            <div class="d">
+                <div>10</div>
+                <div>OCT</div>
+            </div>
+            <div class="d">
+                <div>11</div>
+                <div>NOV</div>
+            </div>
+            <div class="d">
+                <div>12</div>
+                <div>DEC</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="b" style="display: block;">
+                <div style="font-weight: bold;">1 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">2 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">3 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">4 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">5月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">6 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">7 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">8 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">9 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">10 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">11 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+            <div class="b">
+                <div style="font-weight: bold;">12 月节日</div>
+                <div style="font-size: 13px;">清明节: 4月3日至5日放假3天</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var ds = document.querySelectorAll('.d')
+    var bs = document.querySelectorAll('.b')
+
+    for (var i = 0; i < ds.length; i++) {
+        ds[i].setAttribute('a', i)
+        ds[i].onmouseover = function() {
+            for (var i = 0; i < ds.length; i++) {
+                ds[i].classList.remove('se')
+            }
+            this.classList.add('se')
+            for (var i = 0; i < bs.length; i++) {
+                bs[i].style.display = "none"
+            }
+            var index = this.getAttribute('a')
+            bs[index].style.display = "block"
+        }
+    }
+</script>
