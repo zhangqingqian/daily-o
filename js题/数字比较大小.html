@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 30%;
+            margin: 10px auto;
+        }
+        
+        input {
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" class="inp" /> <span style="font-weight: bold;">vs</span><input type="text" class="inp1" /> <button>最大的数是>></button><span style="color: red;" class="span">?</span>
+    </div>
+</body>
+
+</html>
+<script>
+    var inp = document.querySelector('.inp')
+    var inp1 = document.querySelector('.inp1')
+    var but = document.querySelector('button')
+    var spn = document.querySelector('.span')
+    but.onclick = function() {
+        m = parseInt(inp.value) >= parseInt(inp1.value) ? parseInt(inp.value) : parseInt(inp1.value)
+        spn.innerHTML = m
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 30%;
+            margin: 10px auto;
+        }
+        
+        input {
+            width: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        原文.html<input type="text" class="inp" />+<input type="text" class="inp1" />=<span style="color: green;">?</span><button>求和</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var inp = document.querySelector('.inp')
+    var inp1 = document.querySelector('.inp1')
+    var but = document.querySelector('button')
+    var spn = document.querySelector('span')
+    but.onclick = function() {
+        console.log(111);
+        spn.innerHTML = parseInt(Number(inp.value) + Number(inp1.value))
+    }
+</script>
